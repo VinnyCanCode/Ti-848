@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; }
+  body button {
+    outline: none;
+    height: 3.5rem;
+    width: 4.5rem;
+    background: linear-gradient(0deg, #939696 0%, #F8EDD7 5%, #e6e1da 100%);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: #202B30;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #e6e1da, inset 0 -3px 1px 0 rgba(93, 80, 51, 0.3), inset 0 -5px 10px 2px rgba(204, 196, 178, 0.8), inset 0 1px 6px 0 rgba(255, 255, 255, 0.8), 0 -1px 0px 2px #CCC4B2, 0 1px 0px 2px rgba(255, 255, 255, 0.7); }
+  body button:active {
+    background: linear-gradient(0deg, #efebe5 0%, #efe8dc 91%, black 100%);
+    box-shadow: inset 0 3px 5px 0 rgba(93, 80, 51, 0.4), inset 0 5px 10px 2px rgba(204, 196, 178, 0.8), inset 0 4px 6px 0 rgba(255, 255, 255, 0.8), 0 -1px 0px 2px #CCC4B2, 0 1px 0px 2px rgba(255, 255, 255, 0.7); }
+  body .calculatorBody {
+    width: 400px;
+    height: 550px;
+    margin: 0 auto;
+    background-color: #e6e1da;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px #999c9c;
+    box-shadow: outset 0 1px 0 0 #e6e1da, inset 0 -3px 1px 0 black, inset 0 -5px 10px 2px black, inset 0 1px 6px 0 black, 0 -1px 0px 2px #CCC4B2, 0 1px 0px 2px black; }
+  body .buttonWrapper {
+    padding: 2rem; }
+  body .calcDisplayScreen {
+    padding: 1rem;
+    border-width: 5px 2px 2px 2px;
+    border-style: outset;
+    border-color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    background-color: #3E554E;
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5), inset 0 2px 12px 0 rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.7); }
+    body .calcDisplayScreen .calcDisplay {
+      color: #74D1AC;
+      font-size: 2.5rem; }
+  body .firstRow .firstRowWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5%; }
+    body .firstRow .firstRowWrapper #AC {
+      grid-column: 1 / span 1; }
+    body .firstRow .firstRowWrapper #CE {
+      grid-column: 2 / span 1; }
+    body .firstRow .firstRowWrapper #division {
+      grid-column: 3 / span 1;
+      font-size: 1.5rem;
+      font-weight: 500; }
+    body .firstRow .firstRowWrapper #multiplication {
+      grid-column: 4 / span 1;
+      font-size: 1rem;
+      font-weight: 700; }
+    body .firstRow .firstRowWrapper #AC, body .firstRow .firstRowWrapper #CE {
+      color: #F8EDD7;
+      background: #61655B;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 -3px 1px 0 rgba(0, 0, 0, 0.3), inset 0 -5px 10px 2px rgba(0, 0, 0, 0.3), inset 0 4px 6px 0 rgba(255, 255, 255, 0.1), 0 -1px 0px 2px #CCC4B2, 0 1px 0px 2px rgba(255, 255, 255, 0.7); }
+    body .firstRow .firstRowWrapper #AC:active, body .firstRow .firstRowWrapper #CE:active {
+      box-shadow: inset 0 3px 5px 0 #62665c, inset 0 5px 10px 2px #62665c, inset 0 4px 6px 0 rgba(255, 255, 255, 0.8), 0 -1px 0px 0px #61655b, 0 -1px 0px -20px rgba(255, 255, 255, 0.7); }
+  body .secondRow .secondRowWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5%; }
+    body .secondRow .secondRowWrapper #seven {
+      grid-column: 1 / span 1; }
+    body .secondRow .secondRowWrapper #eight {
+      grid-column: 2 / span 1; }
+    body .secondRow .secondRowWrapper #nine {
+      grid-column: 3 / span 1; }
+    body .secondRow .secondRowWrapper #minus {
+      grid-column: 4 / span 1;
+      font-size: 2rem;
+      font-weight: 500; }
+  body .thirdRow .thirdRowWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5%; }
+    body .thirdRow .thirdRowWrapper #four {
+      grid-column: 1 / span 1; }
+    body .thirdRow .thirdRowWrapper #five {
+      grid-column: 2 / span 1; }
+    body .thirdRow .thirdRowWrapper #six {
+      grid-column: 3 / span 1; }
+    body .thirdRow .thirdRowWrapper #plus {
+      grid-column: 4 / span 1;
+      font-size: 1.5rem;
+      font-weight: 500; }
+  body .fourthFifthRow .fourthFifthRowWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5%;
+    grid-row-gap: 20%; }
+    body .fourthFifthRow .fourthFifthRowWrapper #two {
+      grid-column: 2 / span 1; }
+    body .fourthFifthRow .fourthFifthRowWrapper #three {
+      grid-column: 3 / span 1; }
+    body .fourthFifthRow .fourthFifthRowWrapper #zero {
+      width: 100%;
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 1; }
+    body .fourthFifthRow .fourthFifthRowWrapper #decimal {
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 1; }
+    body .fourthFifthRow .fourthFifthRowWrapper #equals {
+      height: 100%;
+      grid-column: 4 / span 1;
+      grid-row: 1 / span 2;
+      color: white;
+      background: #fa4b05;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 -3px 1px 0 #a41b15, inset 0 -5px 10px 2px rgba(164, 27, 21, 0.5), inset 0 4px 6px 0 rgba(255, 255, 255, 0.1), 0 -1px 0px 2px #CCC4B2, 0 1px 0px 2px rgba(255, 255, 255, 0.7); }
+    body .fourthFifthRow .fourthFifthRowWrapper #equals:active {
+      box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.4), inset 0 5px 10px 2px rgba(0, 0, 0, 0.2), 0 -1px 0px 2px #CCC4B2, 0 1px 0px 2px rgba(255, 255, 255, 0.7); }
